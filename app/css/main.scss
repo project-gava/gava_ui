@@ -2,73 +2,79 @@
 $color1: #000000;
 $color2: #ffffff;
 $color3: #cccccc;
-$shadow: 0 0 10px rgba(0,0,0,0.1);
+$shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 $body-bg: #f5f5f5;
-$font: 'Open Sans', sans-serif;
 $searchcolor: #ebebeb;
-$searchinput: #333;
+$grey: #333;
+$btnhover: #ff523b;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+//border
+$border: 1px solid #ebebeb;
+
+//fonts
+$mainfont: "Open Sans", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-// body 
+// body
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background: $body-bg;
+body {
+  font-family: $mainfont;
+  background: $body-bg;
 }
 
 //header
 
-header{
-    background: #fff;
-    padding: 20px 0;
-    box-shadow: $shadow;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+header {
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 //logo
 
-.logo{
-    font-size: 30px;
-    font-weight: 600;
-    color: $searchinput;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+  color: $grey;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 
-    &__img{
+  &__img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
     border-radius: 50%;
-    }
+  }
 }
 
 //search
 
-.search{
-    position: relative;
-    width: 300px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
-    background: $searchcolor;
+.search {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background: $searchcolor;
 
-    &__input{
+  &__input {
     flex: 100%;
     flex-grow: 1;
     flex-shrink: 1;
@@ -80,16 +86,104 @@ header{
     outline: none;
     padding: 0 20px;
     font-size: 16px;
-    color: $searchinput;
-    }
+    color: $grey;
+  }
 
-    &__button{
+  &__button {
     padding-right: 13px;
     right: 10px;
     background: none;
     border: none;
     outline: none;
-    color: #333;
+    color: $grey;
     cursor: pointer;
-    }
+  }
+
+  &__button:hover {
+    color: $btnhover;
+  }
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+
+  &__item {
+    margin: 0 10px;
+  }
+  &__item a {
+    text-decoration: none;
+    color: $grey;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__item a:hover {
+    color: $btnhover;
+  }
+}
+
+.account-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-right: 10px;
+  margin-right: 15px;
+  border: $border;
+  border-radius: 50px;
+
+  &__account-img-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__account-dropdown-items {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: $color2;
+    box-shadow: $shadow;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: none;
+  }
+
+  &__account-username {
+    font-size: 16px;
+    font-weight: 500;
+    color: $grey;
+  }
+  &__account-dropdown-icon {
+    font-size: 16px;
+    color: $grey;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    border: $border;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// main container
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
