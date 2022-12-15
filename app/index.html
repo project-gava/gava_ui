@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -15,8 +17,8 @@
             <div class="logo__site-name">Gava</div>
         </div>
         <div class="search">
-            <input class="search__input" type="text" placeholder="Search">
-            <button class="search__button">
+            <input type="search" class="search__input" placeholder="Search">
+            <button type="search" class="search__button">
                 <i class="fas fa-search"></i>
             </button>
         </div>
@@ -37,7 +39,7 @@
             </span>
         </div>
     </header>
-    <main>
+    <main class="main-content">
         <div class="sidebar">
             <div class="sidebar__nav">
                 <ul class="sideba__main">
@@ -101,52 +103,60 @@
             </div>
         </div>
         <div class="content">
-            <div class="content__top-story">
-                <div class="content__story-title">Stories</div>
-                <div class="content__story">
-                    <div class="content__story-content">
-                        <div class="content__story-content-title"></div>
-                        <div class="content__story-content-description"></div>
-                        <div class="content__story-content-cover">
+            <div class="top-story">
+                <div class="top-story__story-title">Stories</div>
+                <div class="top-story__story">
+                    <div class="top-story__story-content">
+                        <div class="top-story__story-content-title">Package manager</div>
+                        <div class="top-story__story-content-description">
+                            Install Bootstrap Icons—including SVGs, icon sprite, and icon fonts—with npm or Composer.
+                            Then, choose how you’d like to
+                            include the icons with the usage instructions.
+                        </div>
+                        <div class="top-story__story-content-cover">
                             <img src="" alt="">
-                        </div>  
+                        </div>
                     </div>
-                    <div class="content__story-footer">
-                        <div class="content__user">
-                            <div class="content__user-profile-wrapper">
+                    <div class="top-story__story-footer">
+                        <div class="top-story__user">
+                            <div class="top-story__user-profile-wrapper">
                                 <img src="" alt="Profile">
+                                <span class="online-status"></span>
                             </div>
-                            <div class="content__user-info">
-                                <div class="content__user-name">Fred Mbugua</div>
-                                <div class="content__story-views">75k views</div>
-                                <span class="content__dot">&#183</span>
-                                <div class="content__story-time-posted">7 weeks ago</div>
+                            <div class="top-story__user-info">
+                                <div class="top-story__user-name">Fred Mbugua</div>
+                                <div class="top-story__story-views">75k views</div>
+                                <span class="top-story__dot">&#183</span>
+                                <div class="top-story__story-time-posted">7 weeks ago</div>
                             </div>
                         </div>
-                        <div class="content__story-length">5 min</div>
+                        <div class="top-story__story-length">5 min</div>
                     </div>
                 </div>
-                <div class="content__story">
-                    <div class="content__story-content">
-                        <div class="content__story-content-title"></div>
-                        <div class="content__story-content-description"></div>
-                        <div class="content__story-content-cover">
-                            <img src="" alt="">
-                        </div>  
+                <div class="top-story__story">
+                    <div class="top-story__story-content">
+                        <div class="top-story__story-content-title">Download</div>
+                        <div class="top-story__story-content-description">
+                            Releases are published on GitHub and include icon SVGs, fonts, license, and readme. 
+                            Our package.json is also included for those who use npm.
                     </div>
-                    <div class="content__story-footer">
-                        <div class="content__user">
+                        <div class="top-story__story-content-cover">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="top-story__story-footer">
+                        <div class="top-story__user">
                             <div class="user-profile-wrapper">
                                 <img src="" alt="Profile">
                             </div>
-                            <div class="content__user-info">
-                                <div class="content__user-name">Fred Mbugua</div>
-                                <div class="content__story-views">75k views</div>
-                                <span class="content__dot">&#183</span>
-                                <div class="content__story-time-posted">7 weeks ago</div>
+                            <div class="top-story__user-info">
+                                <div class="top-story__user-name">Fred Mbugua</div>
+                                <div class="top-story__story-views">75k views</div>
+                                <span class="top-story__dot">&#183</span>
+                                <div class="top-story__story-time-posted">7 weeks ago</div>
                             </div>
                         </div>
-                        <div class="content__story-length">5 min</div>
+                        <div class="top-story__story-length">5 min</div>
                     </div>
                 </div>
             </div>
@@ -158,7 +168,7 @@
                         <div class="content__story-content-description"></div>
                         <div class="content__story-content-cover">
                             <img src="" alt="">
-                        </div>  
+                        </div>
                     </div>
                     <div class="content__story-footer">
                         <div class="content__user">
@@ -181,7 +191,7 @@
                         <div class="content__story-content-description"></div>
                         <div class="content__story-content-cover">
                             <img src="" alt="">
-                        </div>  
+                        </div>
                     </div>
                     <div class="content__story-footer">
                         <div class="content__user">
@@ -204,7 +214,7 @@
                         <div class="content__story-content-description"></div>
                         <div class="content__story-content-cover">
                             <img src="" alt="">
-                        </div>  
+                        </div>
                     </div>
                     <div class="content__story-footer">
                         <div class="content__user">
@@ -227,7 +237,7 @@
                         <div class="content__story-content-description"></div>
                         <div class="content__story-content-cover">
                             <img src="" alt="">
-                        </div>  
+                        </div>
                     </div>
                     <div class="content__story-footer">
                         <div class="content__user">
@@ -248,4 +258,5 @@
         </div>
     </main>
 </body>
+
 </html>
