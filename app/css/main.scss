@@ -319,7 +319,7 @@ main.main-content {
     }
     &__item--active{
       // box-shadow: $main-shadow;
-      // background: $background_link_hover;
+      background: $background_link_hover;
       color: $accent;
       & .sidebar__icon{
         color: $accent;
