@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/product-sans");
+
+/*------------------------------------*\
+  #CONSTANTS
+\*------------------------------------*/
+
 //colors
 $color1: #000000;
 $color2: #ffffff;
@@ -33,7 +38,9 @@ $text-color: #404040;
   box-sizing: border-box !important;
 }
 
-// body
+/*------------------------------------*\
+  #BODY
+\*------------------------------------*/
 
 body {
   font-family: $secondaryfont;
@@ -41,7 +48,9 @@ body {
   background: $body-bg;
 }
 
-//header
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
 
 header {
   background: #fff;
@@ -58,7 +67,9 @@ header {
   z-index: 1;
 }
 
-//logo
+/*------------------------------------*\
+  #LOGO
+\*------------------------------------*/
 
 .logo {
   font-size: 30px;
@@ -78,12 +89,14 @@ header {
   }
 }
 
-//search
+/*------------------------------------*\
+  #SEARCH
+\*------------------------------------*/
 
 .search {
   position: relative;
-  width: 300px;
-  height: 40px;
+  width: 400px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,6 +133,10 @@ header {
   }
 }
 
+/*------------------------------------*\
+  #MENU-ITEMS
+\*------------------------------------*/
+
 .menu-items {
   display: flex;
   align-items: center;
@@ -128,6 +145,7 @@ header {
 
   &__item {
     margin: 0 10px;
+    position: relative;
   }
 
   &__item a {
@@ -140,7 +158,53 @@ header {
   &__item a:hover {
     color: $btnhover;
   }
+  & i{
+    font-size: 25px;
+    color: $grey;
+    padding: 0 10px;
+  }
+  & i:hover{
+    color: $btnhover;
+    cursor: pointer;
+  }
+  &__tooltip {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: $color2;
+    box-shadow: $shadow;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: none;
+    z-index: 1;
+    text-align: center;
+  }
+  &__tooltip::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom: 5px solid $color2;
+  }
+  &__tooltip::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom: 5px solid $color2;
+  }
+  &__item:hover .menu-items__tooltip {
+    display: block;
+  }
 }
+
+/*------------------------------------*\
+  #ACCOUNT-DROPDOWN
+\*------------------------------------*/
 
 .account-dropdown {
   position: relative;
@@ -184,19 +248,22 @@ header {
   }
 
   &__account-dropdown-icon {
+    justify-content: center;
     font-size: 16px;
     color: $grey;
     cursor: pointer;
     margin-left: 10px;
     border-radius: 50%;
-    padding: 5px;
+    padding: 4px;
     border: $border;
     display: flex;
     align-items: center;
   }
 }
 
-// main container
+/*------------------------------------*\
+  #MAIN-CONTAINER
+\*------------------------------------*/
 
 main.main-content {
   width: 100%;
@@ -205,7 +272,10 @@ main.main-content {
   // justify-content: space-between;
   // align-items: center;
 
-  //sidebar
+/*------------------------------------*\
+  #SIDE-BAR
+\*------------------------------------*/
+
   & .sidebar {
     width: 220px;
     border: 1px solid black;
@@ -217,11 +287,17 @@ main.main-content {
     height: max-content;
   }
 
+    /*------------------------------------*\
+    #CONTENT AND TOP-STORY, MOST-READ
+  \*------------------------------------*/
+
   & .content {
     margin-left: 250px;
     display: flex;
     flex-flow: column;
     gap: 20px;
+
+    //TOP-STORY
 
     & .top-story {
       border: 1px solid #000000;
@@ -313,4 +389,6 @@ main.main-content {
   }
 }
 
-//sidebar
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/

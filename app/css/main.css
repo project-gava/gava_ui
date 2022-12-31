@@ -1,17 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/product-sans");
+/*------------------------------------*\
+  #CONSTANTS
+\*------------------------------------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box !important;
 }
 
+/*------------------------------------*\
+  #BODY
+\*------------------------------------*/
 body {
   font-family: "Product Sans", sans-serif;
   font-size: 16px;
   background: #fff;
 }
 
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
 header {
   background: #fff;
   height: 65px;
@@ -27,6 +36,9 @@ header {
   z-index: 1;
 }
 
+/*------------------------------------*\
+  #LOGO
+\*------------------------------------*/
 .logo {
   font-size: 30px;
   font-weight: 600;
@@ -43,10 +55,13 @@ header {
   border-radius: 50%;
 }
 
+/*------------------------------------*\
+  #SEARCH
+\*------------------------------------*/
 .search {
   position: relative;
-  width: 300px;
-  height: 40px;
+  width: 400px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,6 +95,9 @@ header {
   color: #ff523b;
 }
 
+/*------------------------------------*\
+  #MENU-ITEMS
+\*------------------------------------*/
 .menu-items {
   display: flex;
   align-items: center;
@@ -88,6 +106,7 @@ header {
 }
 .menu-items__item {
   margin: 0 10px;
+  position: relative;
 }
 .menu-items__item a {
   text-decoration: none;
@@ -98,7 +117,52 @@ header {
 .menu-items__item a:hover {
   color: #ff523b;
 }
+.menu-items i {
+  font-size: 25px;
+  color: #333;
+  padding: 0 10px;
+}
+.menu-items i:hover {
+  color: #ff523b;
+  cursor: pointer;
+}
+.menu-items__tooltip {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px 0;
+  display: none;
+  z-index: 1;
+  text-align: center;
+}
+.menu-items__tooltip::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom: 5px solid #ffffff;
+}
+.menu-items__tooltip::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom: 5px solid #ffffff;
+}
+.menu-items__item:hover .menu-items__tooltip {
+  display: block;
+}
 
+/*------------------------------------*\
+  #ACCOUNT-DROPDOWN
+\*------------------------------------*/
 .account-dropdown {
   position: relative;
   display: flex;
@@ -137,21 +201,31 @@ header {
   color: #333;
 }
 .account-dropdown__account-dropdown-icon {
+  justify-content: center;
   font-size: 16px;
   color: #333;
   cursor: pointer;
   margin-left: 10px;
   border-radius: 50%;
-  padding: 5px;
+  padding: 4px;
   border: 1px solid #ebebeb;
   display: flex;
   align-items: center;
 }
 
+/*------------------------------------*\
+  #MAIN-CONTAINER
+\*------------------------------------*/
 main.main-content {
   width: 100%;
   margin-top: 80px;
   border: 1px solid black;
+  /*------------------------------------*\
+    #SIDE-BAR
+  \*------------------------------------*/
+  /*------------------------------------*\
+    #CONTENT AND TOP-STORY, MOST-READ
+  \*------------------------------------*/
 }
 main.main-content .sidebar {
   width: 220px;
@@ -250,4 +324,8 @@ main.main-content .content .top-story__author-name {
 main.main-content .content .top-story__story-footer-date {
   font-size: 1.2rem;
   font-weight: 500;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*//*# sourceMappingURL=main.css.map */
