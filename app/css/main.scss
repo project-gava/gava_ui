@@ -182,7 +182,7 @@ header {
     background: $color2;
     box-shadow: $shadow;
     border-radius: 5px;
-    padding: 10px 0;
+    padding: 10px 5px;
     display: none;
     z-index: 1;
     text-align: center;
@@ -290,7 +290,7 @@ main.main-content {
     top: 80px;
     left: 30px;
     bottom: 0;
-    height: 84vh;
+    height: 85vh;
     padding: 10px 10px;
     display: flex;
     flex-flow: column;

@@ -136,7 +136,7 @@ header {
   background: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  padding: 10px 0;
+  padding: 10px 5px;
   display: none;
   z-index: 1;
   text-align: center;
@@ -237,7 +237,7 @@ main.main-content .sidebar {
   top: 80px;
   left: 30px;
   bottom: 0;
-  height: 84vh;
+  height: 85vh;
   padding: 10px 10px;
   display: flex;
   flex-flow: column;
@@ -258,6 +258,7 @@ main.main-content .sidebar__item:hover {
   color: #08b86f;
 }
 main.main-content .sidebar__item--active {
+  background: rgba(177, 235, 211, 0.3490196078);
   color: #08b86f;
 }
 main.main-content .sidebar__item--active .sidebar__icon {
