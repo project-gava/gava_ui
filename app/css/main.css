@@ -424,8 +424,9 @@ main.main-content .content .most-read {
   border: 1px solid rgba(128, 128, 128, 0.2352941176);
   padding: 10px 5px;
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   gap: 10px;
+  overflow-x: hidden;
 }
 main.main-content .content .most-read__title {
   font-size: 1.2rem;
