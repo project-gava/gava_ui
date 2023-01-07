@@ -24,6 +24,8 @@ $main-shadow: 0 1px 25px rgba(109, 117, 141, 0.1);
 //border
 $border: 1px solid #8080803c;
 $container-border: 1px solid #8080803c;
+$profile-border: 1px solid #adf9d1;
+
 
 //debugging-border
 $debugging-border: 1px solid #666;
@@ -400,90 +402,156 @@ main.main-content {
     //TOP-STORY
 
     & .top-story {
-      border: $border;
-      padding: 10px 5px;
+      // border-bottom: $container-border;
+      padding: 0px 5px 10px 5px;
       display: grid;
       grid-template-columns: 2fr 1fr;
-      column-gap: 20px;
+      column-gap: 30px;
+      row-gap: 10px;
 
       &__story-title {
         grid-column: 1/3;
+        color: $accent;
         font-size: 1.5rem;
-        font-weight: 600;
+        padding-left: 3px;
+        font-weight:bold;
       }
 
       &__story {
-        border: $border;
+        border: $container-border;
         border-radius: 15px;
-        padding: $padding;
+        padding: 10px 15px;
         display: flex;
         flex-flow: column;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
       }
 
       &__story-content {
-        border: $border;
         display: grid;
-        grid-template-columns: 2fr 1fr;
-        padding: $padding;
+        grid-template-columns: 1fr 120px;
+        // padding: $padding;
+        row-gap: 5px;
+        column-gap: 20px;
       }
 
       &__story-content-title {
         font-size: 1.2rem;
-        font-weight: 500;
+        color: $text-color;
+        font-weight: 600;
         grid-column: 1/2;
+        grid-row: 1/2;
       }
 
       &__story-content-cover {
-        border: $border;
+        // border: $border;
         object-fit: cover;
-        grid-row: 1/4;
+        grid-row: 2/4;
         grid-column: 2;
-        height: 150px;
+        height: 80px;
+        // width: 100px;
+        & img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
 
       &__story-content-description {
         color: $text-color;
-        grid-row: 2;
+        // border: $border;
+        grid-row: 2/8;
       }
 
       &__story-footer {
-        border: $border;
+        // border: $border;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
-        padding: $padding;
+        // padding: $padding;
       }
 
       &__user {
         display: flex;
         justify-content: space-between;
         gap: 10px;
-        border: $border;
+        // border: $border;
         width: max-content;
       }
 
       &__user-profile-wrapper {
+        position: relative;
         width: 40px;
         height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 50%;
         object-fit: cover;
-        border: $border;
+        border: $profile-border;
+        & img{
+          width: 80%;
+          height: 80%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        & .online-status{
+          display: inline-block;
+          // border: $border;
+          background-color: $accent;
+          border-radius: 50%;
+          width: 8px;
+          height: 8px;
+          position: absolute;
+          bottom: 3px;
+          right: -1px;
+
+        }
       }
 
       &__user-info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        // border: $border;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+      }
+      &__story-stats{
+        color: $grey;
+        font-size: 0.9rem;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        & .top-story__dot{
+          display: inline-block;
+          border: $border;
+          margin-top: 2px;
+          background-color: $grey;
+          border-radius: 50%;
+          width: 4px;
+          height: 4px;
+        }
       }
 
-      &__author-name {
-        font-size: 1.2rem;
+      &__user-name {
+        color: $text-color;
+        font-size: 1rem;
         font-weight: 500;
       }
-
-      &__story-footer-date {
-        font-size: 1.2rem;
-        font-weight: 500;
+      &__story-length{
+        color: $grey;
+        background-color: $background_link_hover;
+        padding: 3px 10px;
+        margin-right: 8px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
       }
     }
   }
