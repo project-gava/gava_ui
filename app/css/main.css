@@ -461,20 +461,6 @@ main.main-content .content .top-story__user-name {
   gap: 5px;
   color: #404040;
 }
-main.main-content .content .top-story__user-name {
-  font-size: 1.2rem;
-  font-weight: 400;
-  grid-column: 1/-1;
-}
-main.main-content .content .top-story__story-views {
-  font-weight: 100;
-}
-main.main-content .content .top-story__dot {
-  font-size: 1.2rem;
-}
-main.main-content .content .top-story__story-time-posted {
-  font-weight: 100;
-}
 main.main-content .content .top-story__story-length {
   color: #808080;
   background-color: rgba(177, 235, 211, 0.3490196078);

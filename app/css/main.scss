@@ -578,25 +578,6 @@ main.main-content {
         gap: 5px;
         color: $text-color;
       }
-
-      &__user-name {
-        font-size: 1.2rem;
-        font-weight: 400;
-        grid-column: 1/-1;
-      }
-
-      &__story-views {
-        font-weight: 100;
-      }
-
-      &__dot {
-        font-size: 1.2rem;
-      }
-
-      &__story-time-posted {
-        font-weight: 100;
-
-      }
       &__story-length{
         color: $grey;
         background-color: $background_link_hover;
