@@ -30,7 +30,7 @@ $dark:#1a1a1a;
 $dark-border: 1px solid #dddbdb9d;
 $dark-story-footer: #2b2d41;
 $dark-text: #f2f2f2;
-$dark-gray: #b7b6b6;
+$dark-grey: #b7b6b6;
 
 $background_link_hover: #b1ebd359;
 
@@ -430,14 +430,15 @@ main.main-content {
 
       &__story-title {
         grid-column: 1/3;
-        color: $accent;
-        font-size: 1.5rem;
+        color: $text-color;
+        font-size: 2rem;
         padding-left: 3px;
         font-weight:bold;
       }
 
       &__story {
-        border: $container-border;
+        // border: $container-border;
+        background-color: $accent;
         border-radius: 15px;
         padding: 10px 15px;
         display: flex;
@@ -452,13 +453,13 @@ main.main-content {
         display: grid;
         grid-template-columns: 1fr 120px;
         // padding: $padding;
-        row-gap: 5px;
+        row-gap: 10px;
         column-gap: 20px;
       }
 
       &__story-content-title {
-        font-size: 1.2rem;
-        color: $text-color;
+        font-size: 1.5rem;
+        color: $dark-text;
         font-weight: 600;
         grid-column: 1/2;
         grid-row: 1/2;
@@ -479,7 +480,8 @@ main.main-content {
       }
 
       &__story-content-description {
-        color: $text-color;
+        color: $dark-text;
+        line-height: 1.4;
         // border: $border;
         grid-row: 2/8;
       }
@@ -513,7 +515,7 @@ main.main-content {
         justify-content: center;
         border-radius: 50%;
         object-fit: cover;
-        border: $profile-border;
+        border: $dark-border;
         & img{
           width: 80%;
           height: 80%;
@@ -522,11 +524,11 @@ main.main-content {
         }
         & .online-status{
           // display: inline-block;
-          border: $border;
-          background-color: $color2;
+          // border: $border;
+          background-color: $accent;
           border-radius: 50%;
-          width: 15px;
-          height: 15px;
+          width: 17px;
+          height: 17px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -536,9 +538,9 @@ main.main-content {
 
           & i{
             // border: $border;
-            color: $accent;
+            color: $color2;
+            margin:unset;
             font-size: 0.7rem;
-            border-radius: 50%;
           }
 
         }
@@ -551,7 +553,7 @@ main.main-content {
         justify-content: center;
       }
       &__story-stats{
-        color: $grey;
+        color: $dark-text;
         font-size: 0.9rem;
         display: flex;
         flex-wrap: nowrap;
@@ -560,9 +562,9 @@ main.main-content {
         gap: 5px;
         & .top-story__dot{
           display: inline-block;
-          border: $border;
+          // border: $border;
           margin-top: 2px;
-          background-color: $grey;
+          background-color: $dark-text;
           border-radius: 50%;
           width: 4px;
           height: 4px;
@@ -570,24 +572,78 @@ main.main-content {
       }
 
       &__user-name {
-        color: $text-color;
         font-size: 1rem;
         font-weight: 500;
         display: grid;
         grid-template-columns: auto auto auto;
         gap: 5px;
-        color: $text-color;
+        color: $dark-text;
       }
       &__story-length{
-        color: $grey;
+        color: $dark-text;
         background-color: $background_link_hover;
-        padding: 3px 10px;
+        font-size: 0.95rem;
+        padding: 2px 10px;
         margin-right: 8px;
         border-radius: 15px;
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
         -ms-border-radius: 15px;
         -o-border-radius: 15px;
+      }
+      &__story:last-of-type{
+        background-color: $dark-story-footer;
+        & .top-story__story-stats{
+          color: $dark-grey;
+        }
+        & .top-story__dot{
+          background-color: $dark-grey;
+        }
+        & .top-story__story-length{
+          color: $dark-text;
+          background-color: $gray_background;
+          padding: 2px 10px;
+          border-radius: 15px;
+        }
+        & .top-story__user-profile-wrapper {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          object-fit: cover;
+          border: $dark-border;
+          & img{
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+          & .online-status{
+            // display: inline-block;
+            // border: $border;
+            background-color: $dark-story-footer;
+            border-radius: 50%;
+            width: 17px;
+            height: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 2px;
+            right: -4px;
+  
+            & i{
+              // border: $border;
+              color: $status-color;
+              margin:unset;
+              font-size: 0.7rem;
+            }
+  
+          }
+        }
       }
     }
 
@@ -608,14 +664,21 @@ main.main-content {
         font-weight:bold;
       }
       &__wrapper{
-        border: $container-border;
+        // border: $container-border;
         display: flex;
         flex-flow: row;
-        flex-wrap: nowrap;
+        overflow-x: auto;
+       -ms-overflow-style: none;
+        scrollbar-width: none;
         gap: 20px;
+      }
+      &__wrapper::-webkit-scrollbar {
+        display: none !important;
+        visibility: hidden;
       }
       &__story{
         // border: $border;
+        min-width: 230px;
         width: 230px;
         padding: 0%;
         display: flex;
@@ -716,7 +779,7 @@ main.main-content {
         justify-content: space-between;
         gap: 5px;
         & .most-read__story-user-name{
-          color: $dark-gray;
+          color: $dark-grey;
           font-size: 1.05rem;
           display: flex;
           align-items: center;
@@ -741,7 +804,7 @@ main.main-content {
       &__story-stats{
         // justify-self: flex-end;
         // align-self: flex-end;
-        color: $dark-gray;
+        color: $dark-grey;
         font-size: 0.9rem;
         display: flex;
         flex-wrap: nowrap;
