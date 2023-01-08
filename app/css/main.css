@@ -379,6 +379,7 @@ main.main-content .content .top-story__user {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  align-items: center;
 }
 main.main-content .content .top-story__user-profile-wrapper {
   width: 40px;
@@ -390,15 +391,125 @@ main.main-content .content .top-story__user-profile-wrapper {
 }
 main.main-content .content .top-story__user-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+  color: #404040;
 }
-main.main-content .content .top-story__author-name {
+main.main-content .content .top-story__user-name {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 400;
+  grid-column: 1/-1;
+}
+main.main-content .content .top-story__story-views {
+  font-weight: 100;
+}
+main.main-content .content .top-story__dot {
+  font-size: 1.2rem;
+}
+main.main-content .content .top-story__story-time-posted {
+  font-weight: 100;
 }
 main.main-content .content .top-story__story-footer-date {
   font-size: 1.2rem;
+  font-weight: 400;
+}
+main.main-content .content .top-story__story-length {
+  font-weight: 100;
+  color: #404040;
+  background-color: #ebebeb;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+main.main-content .content .most-read {
+  border: 1px solid rgba(128, 128, 128, 0.2352941176);
+  padding: 10px 5px;
+  display: flex;
+  flex-flow: row;
+  gap: 10px;
+  overflow-x: hidden;
+}
+main.main-content .content .most-read__title {
+  font-size: 1.2rem;
   font-weight: 500;
+}
+main.main-content .content .most-read__story {
+  border: 1px solid rgba(128, 128, 128, 0.2352941176);
+  border-radius: 15px;
+  padding: 10px 5px;
+  display: flex;
+  flex-flow: column;
+}
+main.main-content .content .most-read__content {
+  border: 1px solid rgba(128, 128, 128, 0.2352941176);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 10px 5px;
+}
+main.main-content .content .most-read__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  grid-column: 1/2;
+}
+main.main-content .content .most-read__cover {
+  border: 1px solid rgba(128, 128, 128, 0.2352941176);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 150px;
+  width: 160px;
+}
+main.main-content .content .most-read__description {
+  color: #404040;
+  grid-row: 2;
+}
+main.main-content .content .most-read__footer {
+  border: 1px solid rgba(128, 128, 128, 0.2352941176);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 5px;
+}
+main.main-content .content .most-read__user {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.2352941176);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  align-items: center;
+}
+main.main-content .content .most-read__user-profile-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid rgba(128, 128, 128, 0.2352941176);
+}
+main.main-content .content .most-read__user-info {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+  color: #404040;
+}
+main.main-content .content .most-read__user-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  grid-column: 1/-1;
+}
+main.main-content .content .most-read__views {
+  font-weight: 100;
+}
+main.main-content .content .most-read__dot {
+  font: 1.2rem;
+}
+main.main-content .content .most-read__time-posted {
+  font-weight: 100;
+}
+main.main-content .content .most-read__date {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 /*------------------------------------*\
