@@ -1,0 +1,230 @@
+/*--START OF FEEDS SECTION--*/
+.feeds__container{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 10px;
+    height: max-content;
+}
+
+.feeds__area-title{
+    color: #4A4444;
+    margin-bottom: 35px;
+}
+
+.feeds{
+    display: grid;
+    grid-template-columns: 5% 95%;
+    height: max-content;
+    margin-bottom: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    padding: 21px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 7px;
+}
+
+
+.feeds_profile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    align-items: center;
+}
+
+.writer_username{
+    color: #242730;
+}
+
+.writer_username, .writer_post-time, .writer_dot-seperator{
+    color: #808080;
+}
+
+.feeds__content{
+    position: relative;
+    padding-left: 9px;
+}
+
+.feeds__writers-and-commenters-icon{
+    position: relative;
+}
+
+.feeds__profile-writer-avatar{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+.feeds__profile-comments-avatar{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+.feeds__avatar-line-seperator{
+    /* background-color: rgba(221, 219, 219, 0.6156862745); */
+    background-color: rgba(128, 128, 128, 0.2);
+    height: calc(100% - 40px);
+    width: 2px;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+.feeds__profile-writer-avatar img{
+    width: 80%;
+    height: 80%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feeds__profile-comments-avatar img{
+    width: 80%;
+    height: 80%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feeds__profile-writer-details{
+    display: flex;
+    gap: 7px;
+    align-items: baseline;
+    flex-direction: row;
+    position: absolute;
+    margin-bottom: 7px;
+}
+
+.feeds__brief{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: fit-content;
+    margin-top: 15px;
+}
+
+.feeds__brief-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.feeds__brief-details h4{
+    color: #242730;
+    margin-bottom: 7px;
+}
+
+.feeds__brief img{
+    height: 120px;
+    margin: 7px;
+    border-radius: 7px;
+}
+
+.feeds__interactions{
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    color: #404040;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.feeds__interactions.bi {
+    font-size: 20px;
+}
+
+.feeds__interactions-text{
+    font-size: 14px;
+}
+
+.feeds__interactions-icon-share{
+    position: absolute;
+    right: 30px;
+}
+
+.feeds__show-comments{
+    position: absolute;
+    bottom: -12px;
+}
+/* Show comments link */
+.feeds__show-comments h5{
+    color: #08B86F;
+}
+
+/*--END OF FEEDS SECTION--*/
+
+/*---BEGINNING OF TAGS SECTION---*/
+.tags{
+    background-color: #808191;
+    border: 1px solid #808191;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20%;
+    height: max-content;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.tags_items{
+    display: grid;
+    grid-template-columns: 95% 5%;
+    position: relative;
+}
+
+.tags_items-horizontal-divider{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 40%;
+}
+
+.tags_items-horizontal-divider-line{
+    color: #08B86F;
+}
+
+.tag_sections{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tag_action{
+    position: absolute;
+    top: 5px;
+}
+
+.tags_section-topic{
+    color: #b7b6b6;
+}
+
+.tags_section-region{
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #f2f2f2;
+}
+
+.tags_section-upvotes{
+    color: #FFFFFF;
+}
+/*---END OF TAGS SECTION---*/
